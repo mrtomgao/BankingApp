@@ -1,0 +1,11 @@
+C:\Users\Fuck\source\repos\CityNationalWebApi\CityNationalWebApi\bin\Debug\netcoreapp2.0\CityNationalWebApi.deps.json
+C:\Users\Fuck\source\repos\CityNationalWebApi\CityNationalWebApi\bin\Debug\netcoreapp2.0\CityNationalWebApi.runtimeconfig.json
+C:\Users\Fuck\source\repos\CityNationalWebApi\CityNationalWebApi\bin\Debug\netcoreapp2.0\CityNationalWebApi.runtimeconfig.dev.json
+C:\Users\Fuck\source\repos\CityNationalWebApi\CityNationalWebApi\bin\Debug\netcoreapp2.0\CityNationalWebApi.dll
+C:\Users\Fuck\source\repos\CityNationalWebApi\CityNationalWebApi\bin\Debug\netcoreapp2.0\CityNationalWebApi.pdb
+C:\Users\Fuck\source\repos\CityNationalWebApi\CityNationalWebApi\obj\Debug\netcoreapp2.0\CityNationalWebApi.csproj.CoreCompileInputs.cache
+C:\Users\Fuck\source\repos\CityNationalWebApi\CityNationalWebApi\obj\Debug\netcoreapp2.0\CityNationalWebApi.AssemblyInfoInputs.cache
+C:\Users\Fuck\source\repos\CityNationalWebApi\CityNationalWebApi\obj\Debug\netcoreapp2.0\CityNationalWebApi.AssemblyInfo.cs
+C:\Users\Fuck\source\repos\CityNationalWebApi\CityNationalWebApi\obj\Debug\netcoreapp2.0\CityNationalWebApi.dll
+C:\Users\Fuck\source\repos\CityNationalWebApi\CityNationalWebApi\obj\Debug\netcoreapp2.0\CityNationalWebApi.pdb
+C:\Users\Fuck\source\repos\CityNationalWebApi\CityNationalWebApi\obj\Debug\netcoreapp2.0\CityNationalWebApi.csprojResolveAssemblyReference.cache

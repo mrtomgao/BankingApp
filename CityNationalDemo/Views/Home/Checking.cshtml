@@ -1,0 +1,55 @@
+﻿<hr />
+<table border="0" cellpadding="0" cellspacing="50" width="100%">
+	<tr>
+		<td valign="top">
+			<div>
+				<h3>Checking</h3>
+				<p>Balance: <kbd>@ViewBag.CheckingBalance</kbd></p>
+				<p>Interest earned after 1yr: <kbd>@ViewBag.CheckingInterest</kbd></p>
+			</div>
+		</td>
+		<td valign="top">
+			<div>
+				<h3>Recent Transactions</h3>
+
+				@foreach (Transaction x in @ViewBag.CheckingLatest)
+				{
+					@if (x.TranType == "Credit")
+					{
+						<small style="color: green">+ @x.Amount.ToString("C")</small> <small>@FrontEndHelpers.TimeAgo(x.Timestamp)</small><br />
+					}
+					else
+					{
+						<small style="color: red">- @x.Amount.ToString("C")</small> <small>@FrontEndHelpers.TimeAgo(x.Timestamp)</small><br />
+					}
+				}
+
+			</div>
+		</td>
+	</tr>
+</table>
+<div>
+	<button id="btn3" class="btn btn-secondary btn-sm">Make a deposit</button>
+	<button id="btn4" class="btn btn-secondary btn-sm">Make a withdrawal</button>
+</div>
+<div id="frm3">
+	<p>
+		<form method="post" asp-action="Verify">
+			<input type="text" id="amount" name="amount" placeholder="Deposit Amount" />
+			<input type="hidden" id="tranType" name="tranType" value="Credit" />
+			<input type="hidden" id="accType" name="accType" value="Checking" />
+			<button type="submit" class="btn btn-primary btn-sm">Deposit</button>
+		</form>
+	</p>
+</div>
+<div id="frm4">
+	<p>
+		<form method="post" asp-action="Verify">
+			<input type="text" id="amount" name="amount" placeholder="Withdrawal Amount" />
+			<input type="hidden" id="tranType" name="tranType" value="Debit" />
+			<input type="hidden" id="accType" name="accType" value="Checking" />
+			<button type="submit" class="btn btn-primary btn-sm">Withdraw</button>
+		</form>
+	</p>
+</div>
+

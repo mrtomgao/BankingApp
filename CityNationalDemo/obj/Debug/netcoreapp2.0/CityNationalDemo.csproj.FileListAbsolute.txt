@@ -1,0 +1,12 @@
+C:\Users\Fuck\source\repos\CityNationalDemo\CityNationalDemo\bin\Debug\netcoreapp2.0\CityNationalDemo.deps.json
+C:\Users\Fuck\source\repos\CityNationalDemo\CityNationalDemo\bin\Debug\netcoreapp2.0\CityNationalDemo.runtimeconfig.json
+C:\Users\Fuck\source\repos\CityNationalDemo\CityNationalDemo\bin\Debug\netcoreapp2.0\CityNationalDemo.runtimeconfig.dev.json
+C:\Users\Fuck\source\repos\CityNationalDemo\CityNationalDemo\bin\Debug\netcoreapp2.0\CityNationalDemo.dll
+C:\Users\Fuck\source\repos\CityNationalDemo\CityNationalDemo\bin\Debug\netcoreapp2.0\CityNationalDemo.pdb
+C:\Users\Fuck\source\repos\CityNationalDemo\CityNationalDemo\obj\Debug\netcoreapp2.0\CityNationalDemo.csproj.CoreCompileInputs.cache
+C:\Users\Fuck\source\repos\CityNationalDemo\CityNationalDemo\obj\Debug\netcoreapp2.0\CityNationalDemo.AssemblyInfoInputs.cache
+C:\Users\Fuck\source\repos\CityNationalDemo\CityNationalDemo\obj\Debug\netcoreapp2.0\CityNationalDemo.AssemblyInfo.cs
+C:\Users\Fuck\source\repos\CityNationalDemo\CityNationalDemo\obj\Debug\netcoreapp2.0\CityNationalDemo.dll
+C:\Users\Fuck\source\repos\CityNationalDemo\CityNationalDemo\obj\Debug\netcoreapp2.0\CityNationalDemo.pdb
+C:\Users\Fuck\source\repos\CityNationalDemo\CityNationalDemo\obj\Debug\netcoreapp2.0\CityNationalDemo.csprojResolveAssemblyReference.cache
+C:\Users\Fuck\source\repos\CityNationalDemo\CityNationalDemo\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs

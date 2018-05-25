@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewData["Title"] = "Verify";	
+}
+
+<h3>Verify Transaction</h3>
+<div>
+	<p>
+		Amount: <kbd>$@string.Format("{0:n2}", ViewBag.Amount)</kbd>
+	</p>
+	<p>
+		Type: <kbd>@ViewBag.TranType</kbd>
+
+
+	</p>
+	<p>
+		To Account: <kbd>@ViewBag.AccType</kbd>
+	</p>
+	<p>
+		<strong><small>Security Token:</small></strong> <small id="some_div" style="color: red;"></small><pre>@ViewBag.Token</pre>
+
+	</p>
+</div>
+
+<div>
+	<p>
+		<form method="post" asp-action="PostTransaction">
+			<input type="hidden" id="amount" name="amount" value=@ViewBag.Amount />
+			<input type="hidden" id="tranType" name="tranType" value=@ViewBag.TranType />
+			<input type="hidden" id="accType" name="accType" value=@ViewBag.AccType />
+			<input type="hidden" id="token" name="token" value=@ViewBag.Token />
+			<button type="submit" class="btn btn-primary btn-sm">Verify</button>			
+		</form>
+	</p>
+</div>
+<script type="text/javascript">
+	window.onload = function () {
+		var timeLeft = 30;
+		var elem = document.getElementById('some_div');
+		var timerId = setInterval(countdown, 1000);
+
+		function countdown() {
+			if (timeLeft == -1) {
+				clearTimeout(timerId);
+				doSomething();
+			} else {
+				elem.innerHTML = timeLeft + ' seconds remaining';
+				timeLeft--;
+			}
+		}
+
+		function doSomething() {
+			elem.innerHTML = 'Token Expired';
+			//window.location.href = '@Url.Action("Index", "Home")';
+		}
+	}
+
+</script>
+

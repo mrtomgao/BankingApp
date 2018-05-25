@@ -1,0 +1,69 @@
+﻿@{
+	var currentUser = await UserManager.GetUserAsync(User);
+}
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<table border="0" cellpadding="0" cellspacing="50" width="100%">
+	<tr>
+		<td valign="top">
+			<div>
+				<h3>Savings</h3>
+				<p>Balance: <kbd>@ViewBag.SavingsBalance</kbd></p>
+				<p>Interest earned after 1yr: <kbd>@ViewBag.SavingsInterest</kbd></p>
+			</div>
+		</td>
+		<td valign="top">
+			<div>
+				<h3>Recent Transactions</h3>
+
+				@foreach (Transaction x in @ViewBag.SavingsLatest)
+				{					
+					@if (x.TranType == "Credit")
+					{
+						<small style="color: green">+ @x.Amount.ToString("C")</small> <small>@FrontEndHelpers.TimeAgo(x.Timestamp)</small><br />
+					}
+					else
+					{
+						<small style="color: red">- @x.Amount.ToString("C")</small> <small>@FrontEndHelpers.TimeAgo(x.Timestamp)</small><br />
+					}
+				}
+
+			</div>
+		</td>
+	</tr>
+</table>
+
+<div>
+	<button id="btn1" class="btn btn-secondary btn-sm">Make a deposit</button>
+
+	@if (currentUser.CustomerClass != CustomerType.savings)
+	{
+		<button id="btn2" class="btn btn-secondary btn-sm">Transfer to checking</button>
+	}
+</div>
+
+
+
+
+<div id="frm1">
+	<p>
+		<form method="post" asp-action="Verify">
+			<input type="text" id="amount" name="amount" placeholder="Deposit Amount" />
+			<input type="hidden" id="tranType" name="tranType" value="Credit" />
+			<input type="hidden" id="accType" name="accType" value="Savings" />
+			<button type="submit" class="btn btn-primary btn-sm">Deposit</button>
+		</form>
+	</p>
+</div>
+<div id="frm2">
+	<p>
+		<form method="post" asp-action="SavingsTransfer">
+			<input type="text" id="amount" name="amount" placeholder="Transfer amount" />
+			<input type="hidden" id="tranType" name="tranType" value="Debit" />
+			<input type="hidden" id="accType" name="accType" value="Savings" />
+			<button type="submit" class="btn btn-primary btn-sm">Transfer</button>
+		</form>
+	</p>
+</div>
+

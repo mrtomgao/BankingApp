@@ -1,0 +1,47 @@
+﻿@{
+	ViewData["Title"] = "My Account";
+	var currentUser = await UserManager.GetUserAsync(User);
+}
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@await Html.PartialAsync("Savings")
+
+@if (currentUser.CustomerClass != CustomerType.savings) {
+
+	@await Html.PartialAsync("Checking")
+}
+
+<hr />
+<p>
+	<h3>Response</h3>
+
+	<textarea aria-label="With textarea" rows="10" class="form-control" style="font-size: 10px">@TempData["Response"]</textarea>		
+</p>
+
+
+<script type="text/javascript">
+	window.onload = function () {
+			$("#frm1").hide();
+			$("#frm2").hide();
+			$("#frm3").hide();
+			$("#frm4").hide();
+
+			$("#btn1").click(function (e) {
+				$("#frm1").slideToggle("fast");
+				$("#frm2").hide();
+			});
+			$("#btn2").click(function (e) {
+				$("#frm2").slideToggle("fast");
+				$("#frm1").hide();
+			});
+			$("#btn3").click(function (e) {
+				$("#frm3").slideToggle("fast");
+				$("#frm4").hide();
+			});
+			$("#btn4").click(function (e) {
+				$("#frm4").slideToggle("fast");
+				$("#frm3").hide();
+			});
+		}
+</script>
